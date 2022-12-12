@@ -11,8 +11,9 @@ function App() {
     }
     setToDos((curArray) => [toDo, ...curArray]);
     setToDo("");
-    console.log(toDo);
+    console.log(toDo, "inside onSubmit");
   };
+  console.log(toDo, "outside onSubmit");
   console.log("toDos : ", toDos);
   return (
     <div>
