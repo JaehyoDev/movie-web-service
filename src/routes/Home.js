@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Movie from "../components/Movie";
+import Navbar from "../components/Navbar";
+import Banner from "../components/Banner";
 import styles from "../css/Home.module.css";
 
 function Home() {
@@ -50,7 +53,8 @@ function Home() {
         <div className="loading"></div>
       ) : (
         <div>
-          <div className={loading}></div>
+          <Navbar />
+          <Banner />
           {movies.map((movie) => (
             <Movie
               key={movie.id}

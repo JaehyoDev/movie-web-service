@@ -1,34 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import styles from "./Navbar.module.css";
+import style from "../css/Navbar.module.css";
 
 const Navigation = () => {
   const navigate = useNavigate();
+
+  // change nav color when scrolling
+  const [color, setColor] = useState(false);
+  const changeColor = () => {
+    if (window.scrollY >= 50) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+    console.log(color);
+  };
+
+  window.addEventListener("scroll", changeColor);
+
   return (
-    <nav className={styles.nav}>
-      <Navbar bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand
-            style={{ cursor: "pointer" }}
-            onClick={() => navigate("/")}
+    <Navbar
+      className={
+        color ? `${style.navbar} ${style.navbar__dark}` : `${style.navbar}`
+      }
+      collapseOnSelect
+      fixed="top"
+    >
+      <Container className={style.container}>
+        <Navbar.Brand className={style.title} onClick={() => navigate("/home")}>
+          Movie Viewer
+        </Navbar.Brand>
+        <Nav className="me-auto">
+          <Nav.Link
+            className="mx-2 p-auto"
+            onClick={() => navigate("/movie/new_movies")}
           >
-            <h1 className={styles.title}>Movie Viewer</h1>
-          </Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link onClick={() => navigate("/movie/popular_movies")}>
-              Popular
-            </Nav.Link>
-            <Nav.Link onClick={() => navigate("/movie/highRated_movies")}>
-              High Rated
-            </Nav.Link>
-            <Nav.Link onClick={() => navigate("/movie/latest_movies")}>
-              Latest
-            </Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
-    </nav>
+            <h3 className={style.navbar__menu__item}>New</h3>
+          </Nav.Link>
+          <Nav.Link
+            className="mx-2 p-auto"
+            onClick={() => navigate("/movie/popular_movies")}
+          >
+            <h3 className={style.navbar__menu__item}>Popular</h3>
+          </Nav.Link>
+          <Nav.Link
+            className="mx-2 p-auto"
+            onClick={() => navigate("/movie/highRated_movies")}
+          >
+            <h3 className={style.navbar__menu__item}>High Rated</h3>
+          </Nav.Link>
+        </Nav>
+      </Container>
+    </Navbar>
   );
 };
 

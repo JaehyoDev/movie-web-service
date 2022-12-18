@@ -20,11 +20,11 @@
   --color-black: #000000;
 
   /* Font size */
-  --font-large: 20px;
-  --font-medium: 19px;
-  --font-regular: 18px;
-  --font-small: 16px;
-  --font-micro: 14px;
+  --font-large: 28px;
+  --font-medium: 16px;
+  --font-regular: 14px;
+  --font-small: 10px;
+  --font-micro: 8px;
 
   /* Font weight */
   --weight-bold: 700;
@@ -35,7 +35,7 @@
   --size-border-radius: 4px;
 
   /* Animation */
-  --animation-duration: 300ms;
+  --animation-duration: 400ms;
 }
 
 /* Universal tags */
