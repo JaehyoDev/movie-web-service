@@ -1,0 +1,28 @@
+.movie {
+  margin: 20px;
+}
+
+.title {
+  margin: 10px 0 30px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.title:hover {
+  color: dodgerblue;
+}
+
+.contents {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    text-align: center;
+  }
+}

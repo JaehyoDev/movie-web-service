@@ -14,7 +14,6 @@ const Navigation = () => {
     } else {
       setColor(false);
     }
-    console.log(color);
   };
 
   window.addEventListener("scroll", changeColor);
