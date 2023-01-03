@@ -10,7 +10,7 @@
 }
 
 .title:hover {
-  color: dodgerblue;
+  color: var(--color-red);
 }
 
 .contents {

@@ -33,6 +33,14 @@
   display: inline-block;
 }
 
+.movie:hover .genres {
+  color: var(--color-white);
+}
+
+.rating {
+  color: var(--color-orange);
+}
+
 @media screen and (max-width: 798px) {
   .movie {
     margin: 10px auto;

@@ -17,15 +17,17 @@ const Movie = ({ id, coverImg, title, year, rating, genres }) => {
           &nbsp;&nbsp;&nbsp;
           {"|"}
           &nbsp;&nbsp;&nbsp;
-          <FontAwesomeIcon icon={faStar} />
-          {rating}
+          <FontAwesomeIcon icon={faStar} className={styles.rating} /> {rating}
         </p>
         <ul>
           {genres
             ? genres.map((genre) => (
-                <li className={styles.genres} key={genre}>
-                  {genre}
-                </li>
+                <span>
+                  <li className={styles.genres} key={genre}>
+                    {genre}
+                  </li>
+                  <span>&nbsp;</span>
+                </span>
               ))
             : "None"}
         </ul>
