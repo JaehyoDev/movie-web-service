@@ -7,6 +7,7 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 const Movie = ({ id, coverImg, title, year, rating, genres }) => {
   return (
     <li className={styles.movie}>
+      {console.log("영화제목 : ", title)}
       <Link to={`/movie/${id}`}>
         <img className={styles.coverImg} src={coverImg} alt={title} />
         <h2 className={styles.title}>

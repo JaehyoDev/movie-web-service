@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import style from "../css/Navbar.module.css";
+import styles from "../css/Navbar.module.css";
 
 const Navigation = () => {
   const navigate = useNavigate();
@@ -21,13 +21,16 @@ const Navigation = () => {
   return (
     <Navbar
       className={
-        color ? `${style.navbar} ${style.navbar__dark}` : `${style.navbar}`
+        color ? `${styles.navbar} ${styles.navbar__dark}` : `${styles.navbar}`
       }
       collapseOnSelect
       fixed="top"
     >
-      <Container className={style.container}>
-        <Navbar.Brand className={style.title} onClick={() => navigate("/home")}>
+      <Container className={styles.container}>
+        <Navbar.Brand
+          className={styles.title}
+          onClick={() => navigate("/home")}
+        >
           Movie Viewer
         </Navbar.Brand>
         <Nav className="me-auto">
@@ -35,19 +38,19 @@ const Navigation = () => {
             className="mx-2 p-auto"
             onClick={() => navigate("/movie/new_movies")}
           >
-            <h3 className={style.navbar__menu__item}>New</h3>
+            <h3 className={styles.navbar__menu__item}>New</h3>
           </Nav.Link>
           <Nav.Link
             className="mx-2 p-auto"
             onClick={() => navigate("/movie/popular_movies")}
           >
-            <h3 className={style.navbar__menu__item}>Popular</h3>
+            <h3 className={styles.navbar__menu__item}>Popular</h3>
           </Nav.Link>
           <Nav.Link
             className="mx-2 p-auto"
             onClick={() => navigate("/movie/highRated_movies")}
           >
-            <h3 className={style.navbar__menu__item}>High Rated</h3>
+            <h3 className={styles.navbar__menu__item}>High Rated</h3>
           </Nav.Link>
         </Nav>
       </Container>

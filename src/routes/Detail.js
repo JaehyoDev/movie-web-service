@@ -21,18 +21,19 @@ function Detail() {
 
   return (
     <div>
-      {loading ? <div className="loading"></div> : ""}
-      <MovieDetail
-        url={detail.url}
-        year={detail.year}
-        rating={detail.rating}
-        runtime={detail.runtime}
-        coverImg={detail.medium_cover_image}
-        backImg={detail.background_image}
-        title={detail.title_long}
-        desc={detail.description_full}
-        genres={detail.genres}
-      />
+      {loading ? (
+        <div className="loading"></div>
+      ) : (
+        <MovieDetail
+          url={detail.url}
+          rating={detail.rating}
+          runtime={detail.runtime}
+          coverImg={detail.medium_cover_image}
+          title={detail.title_long}
+          desc={detail.description_full}
+          genres={detail.genres}
+        />
+      )}
     </div>
   );
 }
