@@ -5,6 +5,7 @@ import styles from "../css/Navbar.module.css";
 
 const Navigation = () => {
   const navigate = useNavigate();
+  console.log("넷바실행");
 
   // change nav color when scrolling
   const [color, setColor] = useState(false);
@@ -27,28 +28,25 @@ const Navigation = () => {
       fixed="top"
     >
       <Container className={styles.container}>
-        <Navbar.Brand
-          className={styles.title}
-          onClick={() => navigate("/home")}
-        >
+        <Navbar.Brand className={styles.title} onClick={() => navigate("/")}>
           Movie Viewer
         </Navbar.Brand>
         <Nav className="me-auto">
           <Nav.Link
             className="mx-2 p-auto"
-            onClick={() => navigate("/movie/new_movies")}
+            onClick={() => navigate("/new_movies")}
           >
             <h3 className={styles.navbar__menu__item}>New</h3>
           </Nav.Link>
           <Nav.Link
             className="mx-2 p-auto"
-            onClick={() => navigate("/movie/popular_movies")}
+            onClick={() => navigate("/popular_movies")}
           >
             <h3 className={styles.navbar__menu__item}>Popular</h3>
           </Nav.Link>
           <Nav.Link
             className="mx-2 p-auto"
-            onClick={() => navigate("/movie/highRated_movies")}
+            onClick={() => navigate("/highRated_movies")}
           >
             <h3 className={styles.navbar__menu__item}>High Rated</h3>
           </Nav.Link>

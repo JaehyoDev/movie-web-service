@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import MovieDetail from "../components/MovieDetail";
+import Navbar from "../components/Navbar";
 
 function Detail() {
   const [loading, setLoading] = useState(true);
@@ -24,15 +25,19 @@ function Detail() {
       {loading ? (
         <div className="loading"></div>
       ) : (
-        <MovieDetail
-          url={detail.url}
-          rating={detail.rating}
-          runtime={detail.runtime}
-          coverImg={detail.medium_cover_image}
-          title={detail.title_long}
-          desc={detail.description_full}
-          genres={detail.genres}
-        />
+        <div>
+          <Navbar />
+          <MovieDetail
+            url={detail.url}
+            rating={detail.rating}
+            likes={detail.like_count}
+            runtime={detail.runtime}
+            coverImg={detail.medium_cover_image}
+            title={detail.title_long}
+            desc={detail.description_full}
+            genres={detail.genres}
+          />
+        </div>
       )}
     </div>
   );

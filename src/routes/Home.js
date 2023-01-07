@@ -95,7 +95,7 @@ function Home() {
           <section className={styles.movie}>
             <h2
               className={styles.title}
-              onClick={() => navigate("/movie/new_movies")}
+              onClick={() => navigate("/new_movies")}
             >
               New Movies →
             </h2>
@@ -117,9 +117,9 @@ function Home() {
           <section className={styles.movie}>
             <h2
               className={styles.title}
-              onClick={() => navigate("/movie/popular_movies")}
+              onClick={() => navigate("/popular_movies")}
             >
-              Most Popular Movies →
+              Popular Movies →
             </h2>
             <ul className={styles.contents}>
               {popularMovies.map((movie) => (
@@ -139,7 +139,7 @@ function Home() {
           <section className={styles.movie}>
             <h2
               className={styles.title}
-              onClick={() => navigate("/movie/highRated_movies")}
+              onClick={() => navigate("/highRated_movies")}
             >
               High Rated Movies →
             </h2>

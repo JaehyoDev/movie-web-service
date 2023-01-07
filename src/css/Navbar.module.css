@@ -7,6 +7,11 @@
   line-height: 60px;
 }
 
+.title:hover {
+  color: var(--color-red);
+  cursor: pointer;
+}
+
 .navbar {
   width: 100%;
   padding: 0 15px;

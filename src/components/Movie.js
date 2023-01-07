@@ -3,13 +3,22 @@ import { Link } from "react-router-dom";
 import styles from "../css/Movie.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import defaultCoverImg from "./images/no-image-available.jpg";
 
 const Movie = ({ id, coverImg, title, year, rating, genres }) => {
+  const handleImgError = (e) => {
+    e.target.src = defaultCoverImg;
+  };
+
   return (
     <li className={styles.movie}>
-      {console.log("영화제목 : ", title)}
       <Link to={`/movie/${id}`}>
-        <img className={styles.coverImg} src={coverImg} alt={title} />
+        <img
+          className={styles.coverImg}
+          src={coverImg}
+          onError={handleImgError}
+          alt="Poster"
+        />
         <h2 className={styles.title}>
           {title.length < 20 ? title : `${title.substring(0, 20)}...`}
         </h2>
@@ -23,10 +32,8 @@ const Movie = ({ id, coverImg, title, year, rating, genres }) => {
         <ul>
           {genres
             ? genres.map((genre) => (
-                <span>
-                  <li className={styles.genres} key={genre}>
-                    {genre}
-                  </li>
+                <span key={genre}>
+                  <li className={styles.genres}>{genre}</li>
                   <span>&nbsp;</span>
                 </span>
               ))

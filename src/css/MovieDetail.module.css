@@ -1,5 +1,6 @@
 .main {
-  width: 800px;
+  position: relative;
+  width: 1000px;
   margin: 10px auto;
   padding: 10px;
   border-radius: 5px;
@@ -16,13 +17,17 @@
   box-shadow: 10px 10px 10px 0px rgba(191, 191, 191, 1);
 }
 
+.title {
+  margin-top: 0;
+}
+
 .movieInfo {
   margin-left: 40px;
 }
 
 .genre {
   display: inline-block;
-  margin: 0 5px 7px 0;
+  margin: 10px 5px 10px 0px;
   padding: 5px;
   border: 1px solid red;
   border-radius: 10px;
@@ -38,13 +43,20 @@
 }
 
 .back {
-  display: block;
-  margin: 50px auto;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 0;
+  display: inline;
   border: none;
   background-color: transparent;
-  color: red;
+  color: var(--color-white);
   cursor: pointer;
-  font-size: 15px;
+  font-size: 30px;
+}
+
+.back:hover {
+  color: var(--color-red);
 }
 
 @media screen and (max-width: 798px) {
