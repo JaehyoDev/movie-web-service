@@ -14,7 +14,7 @@ import "./css/style.css";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
-      <Route path="/" element={<Home />} />
+      <Route path={process.env.PUBLIC_URL + "/"} element={<Home />} />
       <Route path="/new_movies" element={<NewMovies />} />
       <Route path="/popular_movies" element={<PopularMovies />} />
       <Route path="/highRated_movies" element={<HighRatedMovies />} />
