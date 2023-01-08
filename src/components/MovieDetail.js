@@ -2,10 +2,10 @@ import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import styles from "../css/MovieDetail.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
+import { faCircleLeft } from "@fortawesome/free-solid-svg-icons";
 import defaultCoverImg from "./images/no-image-available.jpg";
 
 const MovieDetail = ({
@@ -25,12 +25,9 @@ const MovieDetail = ({
 
   return (
     <div className={styles.main}>
-      <button className={styles.back} onClick={() => navigate(-1)}>
-        <FontAwesomeIcon icon={faCircleXmark} />
-      </button>
       <div className={styles.metadata}>
         <img
-          className={coverImg}
+          className={styles.coverImg}
           src={coverImg}
           onError={handleImgError}
           alt="Poster"
@@ -59,6 +56,9 @@ const MovieDetail = ({
         <h2>Synopsis</h2>
         {desc ? <p className={styles.desc}>&nbsp;{desc}</p> : "No Information"}
       </div>
+      <button className={styles.back} onClick={() => navigate(-1)}>
+        <FontAwesomeIcon icon={faCircleLeft} />
+      </button>
     </div>
   );
 };
