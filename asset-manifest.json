@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/movie-web-service/static/css/main.54e1d59a.css",
-    "main.js": "/movie-web-service/static/js/main.8b581df4.js",
+    "main.js": "/movie-web-service/static/js/main.9904d937.js",
     "static/media/avatar_the_way_of_water.jpg": "/movie-web-service/static/media/avatar_the_way_of_water.1a0c750bb36a03f7df4a.jpg",
     "static/media/no-image-available.jpg": "/movie-web-service/static/media/no-image-available.71132e5fedc303cb5730.jpg",
     "index.html": "/movie-web-service/index.html",
     "main.54e1d59a.css.map": "/movie-web-service/static/css/main.54e1d59a.css.map",
-    "main.8b581df4.js.map": "/movie-web-service/static/js/main.8b581df4.js.map"
+    "main.9904d937.js.map": "/movie-web-service/static/js/main.9904d937.js.map"
   },
   "entrypoints": [
     "static/css/main.54e1d59a.css",
-    "static/js/main.8b581df4.js"
+    "static/js/main.9904d937.js"
   ]
 }
